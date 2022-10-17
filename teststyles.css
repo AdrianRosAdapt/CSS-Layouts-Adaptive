@@ -8,6 +8,11 @@
 }
 header {
   height: 50px;
+  background-color: white;
+}
+img {
+  height: 50px;
+  width: 100px;
 }
 .content-wrapper {
   display: grid;
@@ -18,9 +23,8 @@ header {
 /* .layout-options {
   height: 100px;
 } */
-ul {
+.layout-list {
   list-style: none;
-  padding: 0px;
   display: flex;
   justify-content: space-between;
 }
@@ -29,6 +33,10 @@ ul {
   flex-direction: column;
   gap: 1em;
   overflow-y: auto;
+  list-style: none;
+  padding: 0px;
+
+  justify-content: space-between;
 }
 
 .articles-item {
@@ -39,7 +47,6 @@ ul {
   height: 50px;
   width: 300px;
   background-color: white;
-  border-radius: 25px;
 }
 .text-options {
   display: flex;
@@ -49,28 +56,29 @@ ul {
 .main-layout {
   display: grid;
   grid-template-columns: 25% 1fr;
+  gap: 2em;
 }
 .box-navigation {
   height: 40px;
 }
 .box {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   background-color: red;
 }
 .box-options {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  height: 100%;
 }
 .boxes {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1em;
 }
 .box-navigation {
   background-color: white;
   height: 50px;
-  border-radius: 25px;
+  flex-shrink: 1;
 }
